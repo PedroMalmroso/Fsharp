@@ -1,1 +1,10 @@
-do printfn "Hello world!"
+printfn "Hello World!"
+
+
+
+
+
+
+
+
+//(System.Console.ReadLine ())
