@@ -31,15 +31,5 @@ let circ = piecewiseAffine blue 2.0 lst1
 let draw = make circ 
 render "AA" 400 400 draw
 
-(* 
-let lst1 = [(10.0,10.0); (60.0, 80.0); (10.0, 80.0); (10.0, 10.0)]
-let lst2 = [(0.0,0.0); (40.0, 30.0); (0.0, 30.0); (0.0, 0.0)]
-let tri1 = piecewiseAffine green 1.0 lst1
-let tri2 = filledPolygon purple lst2
-let ell = ellipse blue 4.0 20.0 25.0
-let tree = translate 50.0 50.0 (alignV (alignH tri1 Center tri2) Center ell)
-let fig = make tree
-render "my first canvas" 200 200 fig *)
-
 
 
