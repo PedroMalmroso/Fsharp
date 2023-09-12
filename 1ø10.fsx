@@ -3,34 +3,35 @@ open Canvas
 open Color
 open System
 
-let state = float
+type state = int
 let delayTime = None
 
 let w,h = 400,400
 let w1, h1 = 20,20
 let tree = translate ((float w) / 2.0) ((float h) / 2.0) (filledRectangle red w1 h1)
-let draw _ = make tree
-//render "Canvas" w h draw 
+let draw (s: state) = make tree
 
-let react = Console.ReadKey() 
-if react.Key.Equals(ConsoleKey.LeftArrow) then
-    printfn "Left"
-elif react.Key.Equals(ConsoleKey.RightArrow) then
-    printfn "Right"
-elif react.Key.Equals(ConsoleKey.UpArrow) then
-    printfn "Up"
-elif react.Key.Equals(ConsoleKey.DownArrow) then
-    printfn "Down"
-else 
-    ()
+let react (s: state) (ev: Event) : state option =  
+    match ev with
+        | LeftArrow ->
+            printfn "Left arrow"
+            None
+        | RightArrow ->
+            printfn "Right arrow"
+            None
+        | DownArrow ->
+            printfn "Up arrow"
+            None
+        | UpArrow->
+            printfn "Down arrow"
+            None
+        | _ -> None
 
-let initialState = 200
+let initialState : state = 20 / 2
 
 interact "Box" w h delayTime draw react initialState
 
-
-
-//interact "Moving box" w h delayTime draw react initialState *)
+//interact "Moving box" w h delayTime draw react initialState
 
 
 (* let w1,h1 = 400,600
