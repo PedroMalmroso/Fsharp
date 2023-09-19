@@ -5,7 +5,7 @@ let x = 2.0
 let y = f x
 printfn "%A * %A + %A = %A" a 2.0 b y
 
-// Trace-by-hand
+// Trace-by-handd
 
 (*
 

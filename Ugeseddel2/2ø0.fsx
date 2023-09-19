@@ -9,6 +9,6 @@ printfn "Hello %s!" name
 let name2 (firstName: string) (lastName: string) = firstName + " " + lastName 
 printfn "Hello %s!" (name2 "Jon" "Sporring")
 
-// or:
+// orr:
 
 (fun (firstName: string) (lastName: string) -> printfn "Hello %s!" (firstName + " " + lastName)) "Jon" "Sporring"

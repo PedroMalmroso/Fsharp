@@ -39,7 +39,7 @@ printfn "%d! = %A" n result
 
 
 (* let mutable i = 1
-while i>0 do
+while i>0 dox
     printfn "%A=n, fac n = %A" i (fac i)
     i <-i+1
     if (fac i) = 0 then exit 0 
