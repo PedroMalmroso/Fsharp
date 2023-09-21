@@ -1,3 +1,5 @@
+module Arith
+
 type vec = float * float
 
 // addition of vectors 
@@ -21,8 +23,9 @@ printfn "%A" (mul v2 3.0)
 
 // rotation of vector
 
+
 let rot (v1: vec) (a: float) = 
     let (x1, y1) = v1
-    (x1 * cos a - y1 * cos a, x1 * sin a + y1 * cos a)
+    (x1 * cos a - y1 * sin a, x1 * sin a + y1 * cos a)
 
-printfn "%A" (rot v2 4.0)
+//printfn "%A" (rot v2 4.0)
